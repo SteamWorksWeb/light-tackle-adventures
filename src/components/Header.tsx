@@ -13,8 +13,8 @@ const navLinks = [
     label: "Charter Types",
     href: "#charters",
     dropdown: [
-      { label: "Inshore Fishing", href: "/inshore-fishing" },
-      { label: "Tarpon Fishing", href: "/tarpon-fishing" },
+      { label: "Inshore Fishing", href: "/charters/inshore" },
+      { label: "Tarpon Fishing", href: "/charters/tarpon" },
       { label: "Fly Fishing", href: "/fly-fishing" },
     ],
   },
