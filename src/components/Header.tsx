@@ -54,49 +54,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-[#0a1520] border-b border-white/10 hidden md:block">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-sm text-slate-400">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:813-917-4989"
-              className="flex items-center gap-2 hover:text-[#0ea5e9] transition-colors duration-200"
-            >
-              <Phone size={14} />
-              <span>813-917-4989</span>
-            </a>
-            <a
-              href="mailto:jlemke2@tampabay.rr.com"
-              className="flex items-center gap-2 hover:text-[#0ea5e9] transition-colors duration-200"
-            >
-              <Mail size={14} />
-              <span>jlemke2@tampabay.rr.com</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            {/* Instagram */}
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
-              </svg>
-            </a>
-            {/* Facebook */}
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-            </a>
-            {/* YouTube */}
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Main Nav */}
       <header

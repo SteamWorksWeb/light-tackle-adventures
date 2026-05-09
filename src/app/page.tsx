@@ -135,17 +135,17 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/images/hero-red.jpg"
-            alt="Capt. Jim Lemke on the flats of Tampa Bay"
+            alt="Capt. Jim Lemke on the Nature Coast flats"
             fill
             priority
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0d1b2a]/70 via-[#0d1b2a]/40 to-[#0d1b2a]" />
+          <div className="absolute inset-0 bg-slate-900/60 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d1b2a]" />
         </div>
 
         {/* Hero Content */}
@@ -154,7 +154,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[#0ea5e9] text-sm uppercase tracking-[0.25em] font-semibold mb-4"
+            className="text-orange-400 text-sm uppercase tracking-[0.25em] font-semibold mb-4"
           >
             Homosassa · Crystal River · The Nature Coast
           </motion.p>
@@ -166,7 +166,7 @@ export default function HomePage() {
             className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl font-bold text-white leading-tight mb-6"
           >
             Fly Fishing, Inshore &amp; <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8]">
+            <span className="text-white">
               Tarpon Charters
             </span>
             <br />on the Nature Coast
@@ -203,7 +203,7 @@ export default function HomePage() {
             <Link
               href="/about"
               id="hero-learn-cta"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white font-semibold px-8 py-4 rounded-[7px] text-base backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-[7px] text-base hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Meet Capt. Jim
             </Link>
