@@ -174,13 +174,9 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl font-bold text-white leading-tight mb-6"
+            className="font-[family-name:var(--font-playfair)] text-4xl md:text-6xl font-bold text-white leading-tight mb-6"
           >
-            Fly Fishing, Inshore &amp; <br />
-            <span className="text-white">
-              Tarpon Charters
-            </span>
-            <br />on the Nature Coast
+            Fly Fishing, Inshore, Scalloping, &amp; Tarpon Charters
           </motion.h1>
 
 
