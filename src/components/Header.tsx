@@ -106,6 +106,25 @@ export default function Header() {
             : "bg-[#0d1b2a]"
         } border-b border-white/10`}
       >
+        {/* ── Mobile-first Utility Bar ── */}
+        <div className="w-full bg-slate-950 py-2 px-4 border-b border-white/5 flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2">
+          <a
+            href="tel:+18139174989"
+            id="utility-bar-phone"
+            className="text-xs md:text-sm font-medium text-slate-300 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5" />
+            (813) 917-4989
+          </a>
+          <a
+            href="mailto:jlemke2@tampabay.rr.com"
+            id="utility-bar-email"
+            className="text-xs md:text-sm font-medium text-slate-300 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            Email Us
+          </a>
+        </div>
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
