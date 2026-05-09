@@ -58,10 +58,10 @@ export default function ReservationsPage() {
 
       {/* ── CONVERSION GRID ── */}
       <section className="bg-slate-50 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 md:py-24 px-4">
 
           {/* ── LEFT: Trust Signals (5 cols) ── */}
-          <aside className="lg:col-span-5 flex flex-col gap-10">
+          <aside className="lg:col-span-5 flex flex-col gap-10 order-2 lg:order-1">
 
             {/* What Happens Next */}
             <div>
@@ -142,7 +142,7 @@ export default function ReservationsPage() {
           </aside>
 
           {/* ── RIGHT: Booking Engine (7 cols) ── */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 order-1 lg:order-2 mb-8 lg:mb-0">
             <div className="bg-white p-2 md:p-6 rounded-[7px] shadow-lg border border-slate-200 min-h-[600px]">
 
               {/* Widget mount point */}
