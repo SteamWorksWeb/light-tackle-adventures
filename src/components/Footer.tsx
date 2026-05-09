@@ -55,7 +55,7 @@ export default function Footer() {
             Ready for Your Next Adventure?
           </p>
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-white mb-4">
-            Book Your Homosassa Charter Now!
+            Book Your Homosassa Charter Instantly Online Now!
           </h2>
           <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
             Whether you want to chase World-Class Homosassa Tarpon, sight-fish

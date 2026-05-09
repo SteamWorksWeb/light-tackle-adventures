@@ -450,7 +450,7 @@ export default function HomePage() {
         {/* [/EXPERIMENT] */}
         <motion.div {...fadeUp} className="relative isolate z-10 max-w-3xl mx-auto text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mb-5">
-            Book Your Homosassa Charter Now!
+            Book Your Homosassa Charter Instantly Online Now!
           </h2>
           <p className="text-slate-300 text-lg mb-8 leading-relaxed">
             Whether you want to catch a giant tarpon, make that perfect cast
