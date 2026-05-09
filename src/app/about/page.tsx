@@ -54,9 +54,19 @@ export default function AboutPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="bg-[#0a1520] pt-32 pb-20 md:pt-40 md:pb-24 px-6 relative overflow-hidden">
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FA4616]/5 via-transparent to-transparent pointer-events-none" />
+      <section className="pt-32 pb-20 md:pt-40 md:pb-24 px-6 relative overflow-hidden">
+
+        {/* Background image */}
+        <Image
+          src="/images/jim2.jpg"
+          alt=""
+          fill
+          className="object-cover object-center -z-20"
+          sizes="100vw"
+          priority
+        />
+        {/* Dark gradient overlay — 80→95% opacity for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1520]/80 to-[#0a1520]/95 -z-10" />
 
         <div className="max-w-5xl mx-auto relative z-10">
           <p className="text-[#FA4616] text-xs uppercase tracking-[0.3em] font-semibold mb-5">
@@ -159,7 +169,7 @@ export default function AboutPage() {
 
               <Image
                 src="/images/boat.jpg"
-                alt="Capt. Jim Lemke's Custom Flats Skiff"
+                alt="Capt. Jim Lemke's Custom Bay Boat"
                 width={800}
                 height={500}
                 className="w-full h-auto object-cover rounded-[7px] shadow-md my-6"
@@ -167,7 +177,7 @@ export default function AboutPage() {
 
               <p>
                 Light Tackle Adventures runs a custom-rigged shallow-water
-                skiff purpose-built for the Nature Coast flats. With a
+                bay boat purpose-built for the Nature Coast flats. With a
                 draft measured in inches, the boat accesses water most
                 guides never see — the ultra-shallow back lakes, spring
                 runs, and hidden pockets where trophy fish live undisturbed.

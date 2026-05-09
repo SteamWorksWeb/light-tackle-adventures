@@ -87,7 +87,7 @@ const faqItems = [
   },
   {
     q: "Why pole the boat?",
-    a: "Our inshore charters run a skiff that floats in mere inches of water across the Nature Coast backwaters. We pole with the motor up because it's literally too shallow to power in — and poling is the ultimate way to stalk trophy fish on the Homosassa and Crystal River flats.",
+    a: "Our inshore charters run a bay boat that floats in mere inches of water across the Nature Coast backwaters. We pole with the motor up because it's literally too shallow to power in — and poling is the ultimate way to stalk trophy fish on the Homosassa and Crystal River flats.",
   },
 ];
 
