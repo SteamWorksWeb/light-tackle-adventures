@@ -136,16 +136,27 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
+          {/* Desktop hero — wide landscape */}
           <Image
             src="/images/hero-red.jpg"
             alt="Capt. Jim Lemke on the Nature Coast flats"
             fill
             priority
-            className="object-cover"
+            className="hidden md:block object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-slate-900/60 z-0" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d1b2a]" />
+          {/* Mobile hero — vertical portrait */}
+          <Image
+            src="/images/tarpon-hero-mobile.jpeg"
+            alt="Homosassa Tarpon Charter"
+            fill
+            priority
+            className="block md:hidden object-cover object-center"
+            sizes="100vw"
+          />
+          {/* Overlays — z-10 ensures they sit above both images */}
+          <div className="absolute inset-0 bg-slate-900/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d1b2a] z-10" />
         </div>
 
         {/* Hero Content */}
