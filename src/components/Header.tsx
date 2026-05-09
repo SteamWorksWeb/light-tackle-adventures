@@ -63,24 +63,53 @@ export default function Header() {
             : "bg-[#0d1b2a]"
         } border-b border-white/10`}
       >
-        {/* ── Mobile-first Utility Bar ── */}
-        <div className="w-full bg-slate-950 py-2 px-4 border-b border-white/5 flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2">
-          <a
-            href="tel:+18139174989"
-            id="utility-bar-phone"
-            className="text-xs md:text-sm font-medium text-slate-300 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            (813) 917-4989
-          </a>
-          <a
-            href="mailto:jlemke2@tampabay.rr.com"
-            id="utility-bar-email"
-            className="text-xs md:text-sm font-medium text-slate-300 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            Email Us
-          </a>
+        {/* ── Utility Bar ── */}
+        <div className="w-full px-6 py-2 flex justify-between items-center border-b border-white/10">
+
+          {/* Left — contact links */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <a
+              href="tel:+18139174989"
+              id="utility-bar-phone"
+              className="text-xs font-medium text-slate-400 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              (813) 917-4989
+            </a>
+            <a
+              href="mailto:jlemke2@tampabay.rr.com"
+              id="utility-bar-email"
+              className="text-xs font-medium text-slate-400 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5" />
+              jlemke2@tampabay.rr.com
+            </a>
+          </div>
+
+          {/* Right — social icons (desktop only) */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Instagram */}
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            {/* Facebook */}
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            {/* YouTube */}
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-slate-400 hover:text-[#FA4616] transition-colors duration-200">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg>
+            </a>
+          </div>
+
         </div>
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
