@@ -563,26 +563,15 @@ export default function HomePage() {
             local shows.
           </p>
 
-          {/* Video placeholder / thumbnail */}
-          <div className="relative rounded-[7px] overflow-hidden h-80 md:h-[420px] mb-8 border border-white/10">
-            <Image
-              src="/images/maxresdefault.jpg.jpeg"
-              alt="Nature Coast fishing charter video"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 80vw"
+          {/* Responsive YouTube embed — starts at 19s */}
+          <div className="relative w-full max-w-5xl mx-auto rounded-[7px] overflow-hidden aspect-video shadow-xl ring-1 ring-white/10 mb-8">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/tQfGUuKWfFk?start=19"
+              title="Capt. Jim Lemke Fishing Charter Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
-            <div className="absolute inset-0 bg-[#0d1b2a]/50 flex items-center justify-center">
-              <a
-                href="/videos"
-                className="w-18 h-18 w-20 h-20 rounded-full bg-[#0ea5e9]/90 hover:bg-[#0ea5e9] flex items-center justify-center shadow-xl hover:scale-110 transition-all duration-300"
-                aria-label="Watch fishing videos"
-              >
-                <svg viewBox="0 0 24 24" fill="white" className="w-8 h-8 ml-1">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </a>
-            </div>
           </div>
 
           <Link
