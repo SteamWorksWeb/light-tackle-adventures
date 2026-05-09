@@ -183,17 +183,6 @@ export default function HomePage() {
             <br />on the Nature Coast
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Light Tackle Adventures offers world-class fishing charters on
-            Florida&apos;s Nature Coast — guided by Capt. Jim Lemke, a seasoned
-            Homosassa and Crystal River fishing guide with more than 35 years
-            of experience navigating these legendary backwaters.
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -375,13 +364,14 @@ export default function HomePage() {
               About Capt. Jim Lemke
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              When you are looking for world-class inshore fishing on
-              Florida&apos;s Nature Coast, look no further than Capt. Jim Lemke.
-              A seasoned guide with over 35 years navigating the backwaters of
-              Homosassa, Crystal River, Ozello, and Chassahowitzka — he is
-              the go-to choice for anglers from around the world, fishing
-              television producers, sports stars, and celebrities seeking the
-              ultimate saltwater experience.
+              Light Tackle Adventures offers world-class fishing charters on
+              Florida&apos;s Nature Coast — guided by Capt. Jim Lemke, a seasoned
+              Homosassa and Crystal River fishing guide with more than 35 years
+              of experience navigating these legendary backwaters. Whether you&apos;re
+              chasing Tarpon through Homosassa, sight-fishing Snook and Redfish
+              on the Crystal River flats, or exploring the backwaters of Ozello
+              and Chassahowitzka, Capt. Jim is the go-to choice for anglers,
+              television producers, sports stars, and celebrities alike.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
               Capt. Jim Lemke has been featured in many worldwide television
