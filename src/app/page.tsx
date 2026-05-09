@@ -331,27 +331,19 @@ export default function HomePage() {
 
       {/* ── ABOUT CAPT. JIM ── */}
       <section className="py-12 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <motion.div
-            {...fadeUp}
-            className="relative rounded-[7px] overflow-hidden h-96 lg:h-[520px]"
-          >
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Image — left column */}
+          <motion.div {...fadeUp}>
             <Image
-              src="/images/DSC_0045_03.jpg.jpeg"
-              alt="Capt. Jim Lemke — Homosassa fishing guide"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              src="/images/jim2.jpg"
+              alt="Capt. Jim Lemke holding a trophy redfish"
+              width={600}
+              height={750}
+              className="w-full h-auto object-cover rounded-[7px] shadow-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
-            {/* Credential badge */}
-            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur border border-slate-200 rounded-[7px] px-5 py-4">
-              <p className="text-[#FA4616] text-xs uppercase tracking-wider font-semibold mb-0.5">Experience</p>
-              <p className="text-slate-900 font-bold text-2xl">35+ Years</p>
-              <p className="text-slate-600 text-sm">on the Nature Coast waters</p>
-            </div>
           </motion.div>
 
+          {/* Text — right column */}
           <motion.div {...fadeUp}>
             <p className="text-[#FA4616] text-sm uppercase tracking-[0.2em] font-semibold mb-4">
               Your Guide

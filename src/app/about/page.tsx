@@ -95,20 +95,17 @@ export default function AboutPage() {
           {/* ── LEFT: Bio (8 cols) ── */}
           <article className="lg:col-span-8">
 
-            {/* Captain photo */}
-            <div className="relative w-full h-72 md:h-96 rounded-[7px] overflow-hidden mb-10 shadow-md">
-              <Image
-                src="/images/DSC_0045_03.jpg.jpeg"
-                alt="Capt. Jim Lemke — Homosassa fishing guide"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 66vw"
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-900/60 to-transparent" />
-            </div>
-
-            {/* Bio copy */}
+            {/* Bio copy with editorial float wrap */}
             <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed">
+
+              {/* Float image — stacks on mobile, wraps text on desktop */}
+              <Image
+                src="/images/jim2.jpg"
+                alt="Capt. Jim Lemke"
+                width={300}
+                height={400}
+                className="w-full md:w-auto md:float-left md:mr-6 md:mb-4 object-cover object-center rounded-[7px] shadow-md"
+              />
 
               <p>
                 Captain Jim Lemke grew up on the water. Long before he held a
