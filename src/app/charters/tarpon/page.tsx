@@ -70,7 +70,7 @@ export default function TarponChartersPage() {
         {/* Hero background image at low opacity */}
         <div className="absolute inset-0">
           <Image
-            src="/images/charter-tarpon.jpg"
+            src="/images/tarpon-1.jpeg"
             alt=""
             fill
             className="object-cover opacity-20"
@@ -121,7 +121,7 @@ export default function TarponChartersPage() {
             {/* Section image */}
             <div className="relative w-full h-64 md:h-80 rounded-[7px] overflow-hidden shadow-md">
               <Image
-                src="/images/charter-tarpon.jpg"
+                src="/images/tarpon-1.jpeg"
                 alt="Tarpon fishing on the Homosassa flats"
                 fill
                 className="object-cover"
@@ -159,6 +159,13 @@ export default function TarponChartersPage() {
               <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                 Sight Fishing Giants
               </h2>
+              <Image
+                src="/images/tarpon-2.jpeg"
+                alt="Sight fishing for giant Tarpon in Homosassa"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover rounded-[7px] shadow-md my-8"
+              />
               <p>
                 There is nothing in saltwater fishing quite like stalking a
                 rolling Tarpon on a shallow flat. You see the fish first —
