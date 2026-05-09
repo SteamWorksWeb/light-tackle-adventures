@@ -157,6 +157,14 @@ export default function AboutPage() {
                 The Boat &amp; Gear
               </h2>
 
+              <Image
+                src="/boat.jpg"
+                alt="Capt. Jim Lemke's Custom Flats Skiff"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover rounded-[7px] shadow-md my-6"
+              />
+
               <p>
                 Light Tackle Adventures runs a custom-rigged shallow-water
                 skiff purpose-built for the Nature Coast flats. With a
