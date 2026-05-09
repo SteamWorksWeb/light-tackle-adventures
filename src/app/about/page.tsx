@@ -158,7 +158,7 @@ export default function AboutPage() {
               </h2>
 
               <Image
-                src="/boat.jpg"
+                src="/images/boat.jpg"
                 alt="Capt. Jim Lemke's Custom Flats Skiff"
                 width={800}
                 height={500}
@@ -176,8 +176,8 @@ export default function AboutPage() {
               </p>
 
               <p>
-                All tackle is top-tier light-action gear — Sage fly rods,
-                St. Croix spinning setups, and Shimano reels spooled fresh
+                All tackle is top-tier light-action gear — tournament-grade
+                fly rods, premium spinning setups, and high-end reels spooled fresh
                 for every trip. Whether you prefer live bait, artificial
                 lures, or flies, the boat is rigged and ready. Every charter
                 includes all tackle, terminal gear, fishing license, and live
