@@ -63,7 +63,7 @@ export default function Footer() {
             no better guide than Capt. Jim Lemke.
           </p>
           <a
-            href="https://trytn.com/en/lighttackleadventures"
+            href="/reservations"
             target="_blank"
             rel="noopener noreferrer"
             id="footer-book-cta"

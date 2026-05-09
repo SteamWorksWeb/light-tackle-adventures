@@ -191,7 +191,7 @@ export default function HomePage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="https://trytn.com/en/lighttackleadventures"
+              href="/reservations"
               target="_blank"
               rel="noopener noreferrer"
               id="hero-book-cta"
@@ -460,7 +460,7 @@ export default function HomePage() {
             Lemke!
           </p>
           <a
-            href="https://trytn.com/en/lighttackleadventures"
+            href="/reservations"
             target="_blank"
             rel="noopener noreferrer"
             id="mid-page-book-cta"

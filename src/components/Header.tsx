@@ -195,7 +195,7 @@ export default function Header() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="https://trytn.com/en/lighttackleadventures"
+              href="/reservations"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 bg-[#FA4616] hover:bg-[#d93a0f] text-white text-sm font-semibold px-5 py-2 rounded-[7px] shadow-md hover:shadow-[#FA4616]/40 transition-all duration-300"
@@ -294,7 +294,7 @@ export default function Header() {
 
                 <div className="pt-3 border-t border-white/10">
                   <a
-                    href="https://trytn.com/en/lighttackleadventures"
+                    href="/reservations"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-[#FA4616] hover:bg-[#d93a0f] text-white font-semibold py-2.5 rounded-[7px] text-sm transition-colors duration-200"
