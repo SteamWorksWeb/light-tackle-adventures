@@ -147,6 +147,7 @@ export default function HomePage() {
             alt="Capt. Jim Lemke on the Nature Coast flats"
             fill
             priority
+            quality={80}
             className="hidden md:block object-cover"
             sizes="100vw"
           />
@@ -156,6 +157,7 @@ export default function HomePage() {
             alt="Homosassa Tarpon Charter"
             fill
             priority
+            quality={80}
             className="block md:hidden object-cover object-center"
             sizes="100vw"
           />

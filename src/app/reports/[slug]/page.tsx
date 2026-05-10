@@ -41,6 +41,7 @@ export default async function ReportPage({ params }: Props) {
           src={report.image}
           alt={report.title}
           fill
+          quality={80}
           className="object-cover object-center -z-20"
           sizes="100vw"
           priority

@@ -19,6 +19,7 @@ export default function ReportsPage() {
           src="/images/tarpon7.jpeg"
           alt="Nature Coast Fishing Reports"
           fill
+          quality={80}
           className="object-cover object-center -z-20"
           sizes="100vw"
           priority

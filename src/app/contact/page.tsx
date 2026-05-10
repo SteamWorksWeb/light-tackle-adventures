@@ -75,6 +75,7 @@ export default function ContactPage() {
           src="/images/boat.jpg"
           alt="Contact Capt. Jim"
           fill
+          quality={80}
           className="object-cover object-center -z-20"
           sizes="100vw"
           priority

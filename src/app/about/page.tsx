@@ -61,6 +61,7 @@ export default function AboutPage() {
           src="/images/jim2.jpg"
           alt=""
           fill
+          quality={80}
           className="object-cover object-center -z-20"
           sizes="100vw"
           priority
