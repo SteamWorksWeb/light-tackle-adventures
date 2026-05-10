@@ -92,8 +92,13 @@ const faqItems = [
 ];
 
 const species = [
-  "Snook", "Tarpon", "Redfish", "Sea Trout",
-  "Snapper", "Grouper", "Permit", "Shark",
+  { label: "Snook",     href: "/species/snook" },
+  { label: "Tarpon",    href: "/species/tarpon" },
+  { label: "Redfish",   href: "/species/redfish" },
+  { label: "Sea Trout", href: "/species/sea-trout" },
+  { label: "Permit",    href: "/species/permit" },
+  { label: "Sharks",    href: "/species/sharks" },
+  { label: "Scallops",  href: "/species/scallops" },
 ];
 
 const blogPosts = [
@@ -421,12 +426,13 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {species.map((s) => (
-              <span
-                key={s}
-                className="px-4 py-2 bg-white text-slate-800 text-sm font-semibold rounded-[7px] shadow-sm border border-slate-200 hover:border-[#FA4616]/40 hover:shadow-md hover:text-[#FA4616] transition-all duration-200 cursor-pointer"
+              <Link
+                key={s.href}
+                href={s.href}
+                className="px-4 py-2 bg-white text-slate-800 text-sm font-semibold rounded-[7px] shadow-sm border border-slate-200 hover:border-[#FA4616]/40 hover:shadow-md hover:text-[#FA4616] transition-all duration-200"
               >
-                {s}
-              </span>
+                {s.label}
+              </Link>
             ))}
           </div>
         </div>
