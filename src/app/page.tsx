@@ -6,6 +6,43 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
 
+/* ─────────────── YouTube Facade ─────────────── */
+function YouTubeFacade({ videoId, startAt = 0 }: { videoId: string; startAt?: number }) {
+  const [active, setActive] = useState(false);
+  const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+  if (active) {
+    return (
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${videoId}?start=${startAt}&autoplay=1`}
+        title="Capt. Jim Lemke Fishing Charter Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setActive(true)}
+      aria-label="Play video"
+      className="absolute inset-0 w-full h-full group"
+    >
+      {/* Thumbnail */}
+      <Image src={thumb} alt="Video thumbnail" fill className="object-cover" sizes="(max-width: 768px) 100vw, 900px" />
+      {/* Dark scrim */}
+      <span className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+      {/* Play button */}
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="w-16 h-16 rounded-full bg-[#FA4616] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-200">
+          <svg viewBox="0 0 24 24" fill="white" className="w-7 h-7 translate-x-0.5"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </span>
+    </button>
+  );
+}
+
 /* ─────────────── Animation Variants ─────────────── */
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -571,15 +608,9 @@ export default function HomePage() {
             local shows.
           </p>
 
-          {/* Responsive YouTube embed — starts at 19s */}
+          {/* YouTube facade — loads iframe only on click, saving ~500KB on initial load */}
           <div className="relative w-full max-w-5xl mx-auto rounded-[7px] overflow-hidden aspect-video shadow-xl ring-1 ring-white/10 mb-8">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/tQfGUuKWfFk?start=19"
-              title="Capt. Jim Lemke Fishing Charter Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            <YouTubeFacade videoId="tQfGUuKWfFk" startAt={19} />
           </div>
 
           <Link
