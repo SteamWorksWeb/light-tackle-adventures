@@ -27,8 +27,8 @@ const charterTypes = [
     subtitle: "NOW BOOKING — Chase the \"Silver King\"",
     description:
       "Homosassa is world-famous as the premier destination for giant Tarpon. Fish the legendary migration corridors of the Nature Coast with Capt. Jim Lemke — Florida's most acrobatic fish awaits.",
-    href: "/tarpon-fishing",
-    image: "/images/tarpon.jpg.jpeg",
+    href: "/charters/tarpon",
+    image: "/images/tarpon7.jpeg",
     alt: "Angler holding a large tarpon on the Homosassa flats",
     badge: "Most Exciting",
   },
@@ -37,8 +37,8 @@ const charterTypes = [
     subtitle: "Inshore Light Tackle",
     description:
       "Catch Snook, Trout, Redfish and much more on a Nature Coast Flats Fishing Charter. The shallow grass flats and backwaters of Homosassa and Crystal River are home to some of Florida's best inshore fishing.",
-    href: "/inshore-fishing",
-    image: "/images/snook736x429.jpg.jpeg",
+    href: "/charters/inshore",
+    image: "/images/hero-red.jpg",
     alt: "Snook caught on the Homosassa flats",
     badge: "Most Popular",
   },
@@ -47,8 +47,8 @@ const charterTypes = [
     subtitle: "Cool Off & Catch Dinner",
     description:
       "What better way to cool off in the heat of the Florida Summer? Get right into the crystal-clear water off Homosassa and Crystal River and gather up dinner right off the shallow sea floor. A unique adventure for the whole family!",
-    href: "/scalloping",
-    image: "/images/slideScallops2-1024x449.jpg.jpeg",
+    href: "/charters/scalloping",
+    image: "/images/scallop1.jpeg",
     alt: "Scalloping in the crystal clear waters of Homosassa",
     badge: "Family Favorite",
   },
@@ -57,7 +57,7 @@ const charterTypes = [
     subtitle: "Sight Fishing on the Flats",
     description:
       "If you like flinging flies, you've come to the right place! Experience incredible shallow-water fly fishing across the Nature Coast with Capt. Jim — one of Homosassa's most seasoned fly guides.",
-    href: "/fly-fishing",
+    href: "/charters/fly-fishing",
     image: "/images/fly2.jpeg",
     alt: "Fly fisherman casting on the Homosassa flats",
     badge: "Specialty",
@@ -98,32 +98,32 @@ const species = [
 
 const blogPosts = [
   {
-    title: "Fall Fishing the Nature Coast",
+    title: "Fall Fishing Tampa Bay",
     excerpt:
-      "With the cold fronts starting to roll in and the Kingfish run in full swing, the dropping water temps have the bite fired up across the Homosassa and Crystal River flats.",
-    date: "October 22, 2017",
-    href: "/reports/fall-fishing-nature-coast",
-    imageSrc: "/images/DSC02941.jpg.jpeg",
+      "With the cold fronts starting to roll in and the Kingfish run in full swing, the dropping water temps have the bite fired up inshore and offshore across the Nature Coast.",
+    date: "",
+    href: "/reports/fall-tampa-bay-fishing",
+    imageSrc: "/images/tarpon-5.jpeg",
     imageAlt: "Fall fishing action on the Nature Coast",
     category: "Fishing Report",
   },
   {
-    title: "Spring Snook and Redfish in Homosassa",
+    title: "Tampa Spring Snook Fishing is On",
     excerpt:
-      "With the last of the cold fronts rolling through the Nature Coast, the Snook bite on the Homosassa and Ozello flats is about to go off. Here's what we're seeing.",
-    date: "Spring 2017",
-    href: "/reports/spring-snook-homosassa",
-    imageSrc: "/images/DSC_0117.jpg.jpeg",
-    imageAlt: "Snook caught on the Homosassa flats",
+      "Tampa spring Snook fishing has been off the hook off the mangrove shorelines. April is living up to its reputation as one of our best months.",
+    date: "",
+    href: "/reports/tampa-spring-snook-fishing",
+    imageSrc: "/images/fly1.jpeg",
+    imageAlt: "Snook caught on the Nature Coast flats",
     category: "Fishing Report",
   },
   {
     title: "Homosassa Scalloping Charters",
     excerpt:
       "What better way to cool off in the heat of the Florida Summer than to get right into the water and gather up dinner right off the shallow sea floor!",
-    date: "Summer 2017",
-    href: "/reports/homosassa-scalloping",
-    imageSrc: "/images/scallops2-370x225.jpg.jpeg",
+    date: "",
+    href: "/reports/spring-snook-kingfish-st-petersburg",
+    imageSrc: "/images/scallop1.jpeg",
     imageAlt: "Scalloping in Homosassa Florida",
     category: "Adventure",
   },
