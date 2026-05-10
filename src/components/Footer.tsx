@@ -15,14 +15,6 @@ const footerSections = [
     ],
   },
   {
-    title: "Charter Info",
-    links: [
-      { label: "Charter Locations", href: "/faq" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Reservations", href: "/reservations" },
-    ],
-  },
-  {
     title: "Target Species",
     links: [
       { label: "Snook", href: "/species/snook" },
@@ -79,7 +71,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="lg:col-span-2">
           <Link href="/" className="inline-flex mb-5 group">
