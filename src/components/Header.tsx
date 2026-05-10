@@ -22,7 +22,6 @@ const navLinks = [
   { label: "FAQ", href: "/faq" },
   { label: "Photos", href: "/photos" },
   { label: "Reports", href: "/reports" },
-  { label: "Reservations", href: "/reservations" },
   { label: "Contact", href: "/contact" },
 ];
 
