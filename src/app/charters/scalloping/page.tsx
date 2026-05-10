@@ -61,7 +61,7 @@ export default function ScallopingChartersPage() {
 
         {/* Background image */}
         <Image
-          src="/images/scallop1.jpg"
+          src="/images/scallop1.jpeg"
           alt="Homosassa Scalloping"
           fill
           className="object-cover object-center -z-20"
@@ -112,7 +112,7 @@ export default function ScallopingChartersPage() {
             {/* Section image */}
             <div className="relative w-full h-64 md:h-80 rounded-[7px] overflow-hidden shadow-md">
               <Image
-                src="/images/scallop1.jpg"
+                src="/images/scallop2.jpeg"
                 alt="Family snorkeling for bay scallops in Homosassa"
                 fill
                 className="object-cover"
