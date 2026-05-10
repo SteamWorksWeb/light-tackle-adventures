@@ -160,6 +160,17 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
           <p>© {new Date().getFullYear()} Light Tackle Adventures — Capt. Jim Lemke. All rights reserved.</p>
           <p>Homosassa &amp; Crystal River, Florida — The Nature Coast</p>
+          <p>
+            Website designed and managed by{" "}
+            <a
+              href="https://steamworks.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FA4616] hover:text-[#d93a0f] transition-colors font-medium"
+            >
+              SteamWorks
+            </a>
+          </p>
         </div>
       </div>
     </footer>
