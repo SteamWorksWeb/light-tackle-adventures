@@ -11,30 +11,34 @@ export default function RedfishPage() {
   return (
     <div className="bg-slate-50 min-h-screen pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 prose prose-lg prose-slate">
-        <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-slate-900 mb-8">
-          Redfish Fishing on the Nature Coast
-        </h1>
+
+        <h1>Redfish Fishing on the Nature Coast</h1>
 
         <p>
           Targeting Redfish in the pristine waters of Homosassa and Crystal
           River delivers some of the most exciting and visual inshore fishing
           available anywhere in Florida. The Nature Coast&apos;s expansive
           shallow grass flats, oyster bars, and backwater creeks support
-          enormous Redfish populations, and the gin-clear water makes
-          sight-casting to tailing fish a realistic, adrenaline-charged
-          pursuit. Capt. Jim Lemke specializes in locating and presenting
-          to Redfish in water so shallow the boat must be poled by hand.
+          enormous Redfish populations.
+        </p>
+        <p>
+          The gin-clear water makes sight-casting to tailing fish a realistic,
+          adrenaline-charged pursuit. Capt. Jim Lemke specializes in locating
+          and presenting to Redfish in water so shallow the boat must be poled
+          by hand.
         </p>
 
         <h2>Best Times to Catch Redfish</h2>
         <p>
           Redfish are available year-round on the Nature Coast, but fall is
-          widely considered the prime season — September through December
-          brings large schools of bull Reds to the flats, and the cooling
-          water temperatures make the fish highly aggressive on both natural
-          baits and artificials. Summer offers excellent sight-fishing
-          opportunities to smaller slot fish on the grass flats during early
-          morning low tides.
+          widely considered the prime season. September through December brings
+          large schools of bull Reds to the flats, and the cooling water
+          temperatures make the fish highly aggressive on both natural baits
+          and artificials.
+        </p>
+        <p>
+          Summer offers excellent sight-fishing opportunities to smaller slot
+          fish on the grass flats during early morning low tides.
         </p>
 
         <h2>Tactics and Gear</h2>
@@ -43,10 +47,12 @@ export default function RedfishPage() {
           tournament-grade fly gear to ensure the best possible presentation
           and fight. Live pinfish, cut mullet, and live shrimp are the most
           reliable natural baits, while gold spoons, paddle tail jigs, and
-          weedless soft plastics are highly effective artificials. On fly,
-          a properly presented crab or shrimp pattern dropped just ahead of
-          a tailing Red in two feet of water is one of the most satisfying
-          moments in inshore fishing.
+          weedless soft plastics are highly effective artificials.
+        </p>
+        <p>
+          On fly, a properly presented crab or shrimp pattern dropped just
+          ahead of a tailing Red in two feet of water is one of the most
+          satisfying moments in inshore fishing.
         </p>
 
         <h2>Book a Redfish Charter</h2>
@@ -55,12 +61,16 @@ export default function RedfishPage() {
           in the fall, Capt. Jim can put you on the fish. Book your Nature
           Coast Redfish charter today.
         </p>
-        <Link
-          href="/reservations"
-          className="inline-block bg-[#FA4616] text-white font-bold px-6 py-3 rounded-[7px] no-underline hover:bg-[#d93a0f] transition-colors"
-        >
-          Check Available Dates →
-        </Link>
+
+        <div className="not-prose mt-8">
+          <Link
+            href="/reservations"
+            className="inline-block bg-[#FA4616] text-white font-bold px-6 py-3 rounded-[7px] hover:bg-[#d93a0f] transition-colors"
+          >
+            Check Available Dates →
+          </Link>
+        </div>
+
       </div>
     </div>
   );
