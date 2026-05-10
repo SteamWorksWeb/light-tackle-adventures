@@ -129,10 +129,7 @@ const faqItems = [
     q: "What is sight fishing?",
     a: "Sight fishing means scanning the water for the push or nervous water of game fish in the shallows. Capt. Jim poles the flats of Homosassa and Ozello in mere inches of water, stalking fish before you ever make a cast.",
   },
-  {
-    q: "Why pole the boat?",
-    a: "Our inshore charters run a bay boat that floats in mere inches of water across the Nature Coast backwaters. We pole with the motor up because it's literally too shallow to power in — and poling is the ultimate way to stalk trophy fish on the Homosassa and Crystal River flats.",
-  },
+
 ];
 
 const species = [
