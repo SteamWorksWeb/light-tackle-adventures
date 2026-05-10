@@ -20,11 +20,7 @@ const navLinks = [
     ],
   },
   { label: "FAQ", href: "/faq" },
-  {
-    label: "Media",
-    href: "#media",
-    dropdown: [{ label: "Nature Coast Fishing Videos", href: "/videos" }],
-  },
+  { label: "Photos", href: "/photos" },
   { label: "Reports", href: "/reports" },
   { label: "Reservations", href: "/reservations" },
   { label: "Contact", href: "/contact" },
