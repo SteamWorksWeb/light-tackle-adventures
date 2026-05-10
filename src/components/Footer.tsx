@@ -8,18 +8,17 @@ const footerSections = [
   {
     title: "Charter Types",
     links: [
-      { label: "Inshore Fishing", href: "/inshore-fishing" },
-      { label: "Tarpon Fishing", href: "/tarpon-fishing" },
-      { label: "Fly Fishing", href: "/fly-fishing" },
-      { label: "Homosassa Scalloping", href: "/scalloping" },
+      { label: "Inshore Fishing", href: "/charters/inshore" },
+      { label: "Tarpon Fishing", href: "/charters/tarpon" },
+      { label: "Fly Fishing", href: "/charters/fly-fishing" },
+      { label: "Homosassa Scalloping", href: "/charters/scalloping" },
     ],
   },
   {
     title: "Charter Info",
     links: [
-      { label: "Charter Locations", href: "/charter-locations" },
+      { label: "Charter Locations", href: "/faq" },
       { label: "FAQ", href: "/faq" },
-      { label: "Rates", href: "/rates" },
       { label: "Reservations", href: "/reservations" },
     ],
   },
@@ -32,6 +31,7 @@ const footerSections = [
       { label: "Sea Trout", href: "/species/sea-trout" },
       { label: "Permit", href: "/species/permit" },
       { label: "Sharks", href: "/species/sharks" },
+      { label: "Scallops", href: "/species/scallops" },
     ],
   },
 ];
