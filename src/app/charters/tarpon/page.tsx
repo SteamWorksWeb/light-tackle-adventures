@@ -70,7 +70,7 @@ export default function TarponChartersPage() {
         {/* Hero background image at low opacity */}
         <div className="absolute inset-0">
           <Image
-            src="/images/tarpon7.jpg"
+            src="/images/tarpon7.jpeg"
             alt=""
             fill
             className="object-cover opacity-20"
