@@ -11,7 +11,6 @@ import BlogCard from "@/components/BlogCard";
 /* ─────────────── YouTube Facade ─────────────── */
 function YouTubeFacade({ videoId, startAt = 0 }: { videoId: string; startAt?: number }) {
   const [active, setActive] = useState(false);
-  const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
   if (active) {
     return (
@@ -31,8 +30,14 @@ function YouTubeFacade({ videoId, startAt = 0 }: { videoId: string; startAt?: nu
       aria-label="Play video"
       className="absolute inset-0 w-full h-full group"
     >
-      {/* Thumbnail */}
-      <Image src={thumb} alt="Video thumbnail" fill className="object-cover" sizes="(max-width: 768px) 100vw, 900px" />
+      {/* Local verified thumbnail — no external network request */}
+      <Image
+        src="/images/vid1.jpg"
+        alt="Nature Coast fishing charter video"
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 900px"
+      />
       {/* Dark scrim */}
       <span className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
       {/* Play button */}
