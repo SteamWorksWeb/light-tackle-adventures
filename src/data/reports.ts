@@ -107,7 +107,7 @@ export const reports: Report[] = [
     title: "Tampa Spring Snook Fishing is On",
     excerpt:
       "Tampa spring Snook fishing has been off the hook off the mangrove shorelines — April is living up to its reputation as one of our best months.",
-    image: "/images/snook1.jpeg",
+    image: "/images/snook.jpeg",
     content:
       "Tampa spring Snook fishing has been off the hook off the mangrove shorelines around the Tampa Bay area. April is typically one of our very best months for flats fishing and so far it has lived up to my expectations. The Snook, Redfish, and Trout fishing has all been on fire.\n\nSnook fishing has been great overall with many small to giant over-slot fish. I have been pleasantly surprised by the number of big trophy Snook we have been catching. The last few years were okay, but this year I have boated more trophy Snook than in years past. We have been averaging around 12 Snook per day, including a few over-slot fish per trip.\n\nRedfish have also been doing very well. On most days I've been getting plenty of Reds mixed in with the mullet schools. Most have been in the 18 to 27-inch class with a handful over 30 inches. On the lower tide days, the larger 30-plus-inch Reds have been showing up consistently.\n\nTrout fishing has also been really great — a lot of big Gator Trout, ranging from 16 to 25 inches with some just under 30. This is the time of year when Snook and Tarpon start their migration to the beaches and passes. If you have a livewell, go catch bait, head to your area of choice, and throw a handful out to see if fish start popping the bait. It's that simple right now.",
   },

@@ -118,7 +118,7 @@ const blogPosts = [
       "Tampa spring Snook fishing has been off the hook off the mangrove shorelines. April is living up to its reputation as one of our best months.",
     date: "",
     href: "/reports/tampa-spring-snook-fishing",
-    imageSrc: "/images/fly1.jpeg",
+    imageSrc: "/images/snook.jpeg",
     imageAlt: "Snook caught on the Nature Coast flats",
     category: "Fishing Report",
   },
