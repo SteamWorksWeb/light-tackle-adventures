@@ -1,28 +1,74 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
-import { Phone, Mail, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, Mail, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+import { submitContactForm } from "@/actions/contact";
+
+// Extend the Window type to include the reCAPTCHA global
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
 
 const inputBase =
   "w-full bg-white border border-slate-200 rounded-[7px] px-4 py-3 text-slate-900 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#FA4616]/30 focus:border-[#FA4616] transition-colors duration-200";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading]     = useState(false);
+  const [error, setError]         = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
     setLoading(true);
-    // TODO: Execute ReCaptcha V3 and submit data to API route
-    await new Promise((res) => setTimeout(res, 800)); // simulate async
-    setLoading(false);
-    setSubmitted(true);
+
+    try {
+      // 1. Get reCAPTCHA V3 token
+      const token = await new Promise<string>((resolve, reject) => {
+        window.grecaptcha.ready(async () => {
+          try {
+            const t = await window.grecaptcha.execute(SITE_KEY, { action: "submit" });
+            resolve(t);
+          } catch (err) {
+            reject(err);
+          }
+        });
+      });
+
+      // 2. Pass FormData + token to the server action
+      const formData = new FormData(formRef.current!);
+      const result = await submitContactForm(formData, token);
+
+      if (result.success) {
+        setSubmitted(true);
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setError(msg);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
+      {/* Load reCAPTCHA V3 SDK — deferred, no badge unless triggered */}
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
+        strategy="lazyOnload"
+      />
+
       {/* ── HERO ── */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">
         <Image
@@ -57,7 +103,7 @@ export default function ContactPage() {
           <div className="lg:col-span-8">
 
             {submitted ? (
-              /* Success state */
+              /* ── Success State ── */
               <div className="flex flex-col items-start gap-4 py-12">
                 <div className="flex items-center gap-3 text-[#FA4616]">
                   <CheckCircle size={32} />
@@ -79,6 +125,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form
+                ref={formRef}
                 onSubmit={handleSubmit}
                 noValidate
                 className="space-y-6"
@@ -173,6 +220,14 @@ export default function ContactPage() {
                   <p className="text-xs text-slate-400 text-right">Max 1,000 characters</p>
                 </div>
 
+                {/* Error banner */}
+                {error && (
+                  <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-[7px] px-4 py-3">
+                    <AlertCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
+                    <p className="text-red-700 text-sm leading-relaxed">{error}</p>
+                  </div>
+                )}
+
                 {/* Submit */}
                 <div>
                   <button
@@ -225,10 +280,7 @@ export default function ContactPage() {
                 </h3>
 
                 <div className="space-y-4">
-                  <a
-                    href="tel:+18139174989"
-                    className="flex items-center gap-3 group"
-                  >
+                  <a href="tel:+18139174989" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-full bg-[#FA4616]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FA4616]/20 transition-colors">
                       <Phone size={16} className="text-[#FA4616]" />
                     </div>
@@ -240,10 +292,7 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  <a
-                    href="mailto:jlemke2@tampabay.rr.com"
-                    className="flex items-center gap-3 group"
-                  >
+                  <a href="mailto:jlemke2@tampabay.rr.com" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-full bg-[#FA4616]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FA4616]/20 transition-colors">
                       <Mail size={16} className="text-[#FA4616]" />
                     </div>
