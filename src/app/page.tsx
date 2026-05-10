@@ -58,7 +58,7 @@ const charterTypes = [
     description:
       "If you like flinging flies, you've come to the right place! Experience incredible shallow-water fly fishing across the Nature Coast with Capt. Jim — one of Homosassa's most seasoned fly guides.",
     href: "/fly-fishing",
-    image: "/images/fly736x429.jpg.jpeg",
+    image: "/images/fly2.jpeg",
     alt: "Fly fisherman casting on the Homosassa flats",
     badge: "Specialty",
   },
