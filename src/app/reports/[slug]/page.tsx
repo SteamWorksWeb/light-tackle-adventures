@@ -6,11 +6,12 @@ import { reports } from "@/data/reports";
 import type { Metadata } from "next";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const report = reports.find((r) => r.slug === params.slug);
+  const { slug } = await params;
+  const report = reports.find((r) => r.slug === slug);
   if (!report) return {};
   return {
     title: `${report.title} | Light Tackle Adventures`,
@@ -22,8 +23,9 @@ export function generateStaticParams() {
   return reports.map((r) => ({ slug: r.slug }));
 }
 
-export default function ReportPage({ params }: Props) {
-  const report = reports.find((r) => r.slug === params.slug);
+export default async function ReportPage({ params }: Props) {
+  const { slug } = await params;
+  const report = reports.find((r) => r.slug === slug);
   if (!report) return notFound();
 
   // Adjacent reports for prev/next navigation
@@ -77,10 +79,14 @@ export default function ReportPage({ params }: Props) {
             />
           </div>
 
-          {/* Content */}
-          <p className="text-slate-700 text-base md:text-lg leading-relaxed">
-            {report.content}
-          </p>
+          {/* Content — split on newlines to preserve paragraph breaks */}
+          <div className="not-prose space-y-5">
+            {report.content.split("\n\n").map((para, i) => (
+              <p key={i} className="text-slate-700 text-base md:text-lg leading-relaxed">
+                {para}
+              </p>
+            ))}
+          </div>
 
           {/* Inline CTA */}
           <div className="not-prose mt-12 bg-[#FA4616]/5 border border-[#FA4616]/20 rounded-[7px] p-6">
