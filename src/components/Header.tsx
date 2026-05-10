@@ -19,15 +19,7 @@ const navLinks = [
       { label: "Scalloping", href: "/charters/scalloping" },
     ],
   },
-  {
-    label: "Charter Info",
-    href: "#info",
-    dropdown: [
-      { label: "Charter Locations", href: "/charter-locations" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Rates", href: "/rates" },
-    ],
-  },
+  { label: "FAQ", href: "/faq" },
   {
     label: "Media",
     href: "#media",
