@@ -31,7 +31,8 @@ const galleryImages = [
 const categories = ["All", "Tarpon", "Fly Fishing", "Inshore", "Scalloping", "The Boat", "The Captain"];
 
 export default function PhotosPage() {
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState<{ src: string; alt: string } | null>(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filtered = activeCategory === "All"
@@ -93,7 +94,7 @@ export default function PhotosPage() {
               <div
                 key={img.src}
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-[7px] group shadow-sm"
-                onClick={() => setSelectedImage(img)}
+                onClick={() => { setActiveImage(img); setIsOpen(true); }}
               >
                 <Image
                   src={img.src}
@@ -129,40 +130,50 @@ export default function PhotosPage() {
         </div>
       </div>
 
-      {/* ── LIGHTBOX ── */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 cursor-zoom-out"
-          onClick={() => setSelectedImage(null)}
+      {/* ── LIGHTBOX — persistent in DOM, animated via CSS transitions ── */}
+      <div
+        className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 cursor-zoom-out transition-all duration-300 ease-in-out ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+      >
+        {/* Close button */}
+        <button
+          className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors z-10"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close lightbox"
         >
-          {/* Close button */}
-          <button
-            className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors z-10"
-            onClick={() => setSelectedImage(null)}
-            aria-label="Close lightbox"
-          >
-            <X size={22} />
-          </button>
+          <X size={22} />
+        </button>
 
-          <div
-            className="relative w-full max-w-5xl aspect-video"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-          </div>
+        {activeImage && (
+          <>
+            {/* Image panel — float-up scale transition */}
+            <div
+              className={`relative w-full max-w-6xl aspect-video transform transition-all duration-500 ease-out ${
+                isOpen
+                  ? "scale-100 translate-y-0 opacity-100"
+                  : "scale-95 translate-y-8 opacity-0"
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={activeImage.src}
+                alt={activeImage.alt}
+                fill
+                className="object-contain"
+                sizes="100vw"
+                quality={90}
+              />
+            </div>
 
-          {/* Caption */}
-          <p className="absolute bottom-6 left-0 right-0 text-center text-slate-300 text-sm px-4">
-            {selectedImage.alt}
-          </p>
-        </div>
-      )}
+            {/* Caption */}
+            <p className="absolute bottom-6 left-0 right-0 text-center text-slate-300 text-sm px-4 pointer-events-none">
+              {activeImage.alt}
+            </p>
+          </>
+        )}
+      </div>
     </>
   );
 }
