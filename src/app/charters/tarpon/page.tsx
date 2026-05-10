@@ -173,7 +173,7 @@ export default function TarponChartersPage() {
                 water barely knee deep — before you cast. The presentation,
                 the pickup, the jump: a hooked Tarpon is the most explosive,
                 aerial fighter in Florida waters, capable of clearing the
-                surface by six feet or more. Capt. Jim poles the bay boat quietly
+                surface by six feet or more. Capt. Jim maneuvers the bay boat quietly
                 into position, reads the fish, calls the cast, and gives you
                 the best possible shot. The rest is up to you.
               </p>

@@ -141,7 +141,7 @@ export default function FlyFishingChartersPage() {
                 right, right now: the correct distance, the correct angle,
                 the correct presentation. Too short and you&apos;ve spooked the
                 school. Too long and the fly lands out of the strike zone.
-                Capt. Jim poles the boat in silence, reads the water, and puts
+                Capt. Jim positions the boat in silence, reads the water, and puts
                 you in the best possible position. What happens next is pure
                 skill, precision, and instinct.
               </p>

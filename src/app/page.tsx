@@ -127,7 +127,7 @@ const faqItems = [
   },
   {
     q: "What is sight fishing?",
-    a: "Sight fishing means scanning the water for the push or nervous water of game fish in the shallows. Capt. Jim poles the flats of Homosassa and Ozello in mere inches of water, stalking fish before you ever make a cast.",
+    a: "Sight fishing means scanning the water for the push or nervous water of game fish in the shallows. Capt. Jim works the flats of Homosassa and Ozello in mere inches of water, stalking fish before you ever make a cast.",
   },
 
 ];

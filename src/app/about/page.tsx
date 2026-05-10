@@ -182,8 +182,8 @@ export default function AboutPage() {
                 draft measured in inches, the boat accesses water most
                 guides never see — the ultra-shallow back lakes, spring
                 runs, and hidden pockets where trophy fish live undisturbed.
-                Powered up, we can cover water fast. Engine off and poling
-                quietly, we become part of the landscape.
+                Powered up, we can cover water fast. Engine off and drifting silently,
+                we become part of the landscape.
               </p>
 
               <p>
