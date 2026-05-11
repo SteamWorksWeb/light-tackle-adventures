@@ -21,8 +21,8 @@
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-sand: var(--sand);
-  --font-body: 'Inter', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-display: var(--font-playfair), serif;
 }
 
 * {
@@ -36,7 +36,7 @@ html {
 body {
   background: #f8fafc;
   color: #0f172a;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

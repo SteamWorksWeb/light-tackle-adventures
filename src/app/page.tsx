@@ -1,54 +1,24 @@
 "use client";
 
-import { useState } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
 
-/* ─────────────── YouTube Facade ─────────────── */
-function YouTubeFacade({ videoId, startAt = 0 }: { videoId: string; startAt?: number }) {
-  const [active, setActive] = useState(false);
-
-  if (active) {
-    return (
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src={`https://www.youtube.com/embed/${videoId}?start=${startAt}&autoplay=1`}
-        title="Capt. Jim Lemke Fishing Charter Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
-    );
-  }
-
-  return (
-    <button
-      onClick={() => setActive(true)}
-      aria-label="Play video"
-      className="absolute inset-0 w-full h-full group"
-    >
-      {/* Local verified thumbnail — no external network request */}
-      <Image
-        src="/images/vid1.jpg"
-        alt="Nature Coast fishing charter video"
-        fill
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw, 900px"
-      />
-      {/* Dark scrim */}
-      <span className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
-      {/* Play button */}
-      <span className="absolute inset-0 flex items-center justify-center">
-        <span className="w-16 h-16 rounded-full bg-[#FA4616] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-200">
-          <svg viewBox="0 0 24 24" fill="white" className="w-7 h-7 translate-x-0.5"><path d="M8 5v14l11-7z"/></svg>
-        </span>
+/* ─────────────── Below-the-fold lazy components ─────────────── */
+const YouTubeFacade = dynamic(() => import("@/components/YouTubeFacade"), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 bg-[#0a1520] flex items-center justify-center">
+      <span className="w-16 h-16 rounded-full bg-[#FA4616]/20 flex items-center justify-center">
+        <svg viewBox="0 0 24 24" fill="white" className="w-7 h-7 translate-x-0.5 opacity-40"><path d="M8 5v14l11-7z"/></svg>
       </span>
-    </button>
-  );
-}
+    </div>
+  ),
+});
+
 
 /* ─────────────── Animation Variants ─────────────── */
 const fadeUp = {
@@ -188,6 +158,7 @@ export default function HomePage() {
             alt="Capt. Jim Lemke on the Nature Coast flats"
             fill
             priority
+            fetchPriority="high"
             quality={80}
             className="hidden md:block object-cover"
             sizes="100vw"
@@ -198,6 +169,7 @@ export default function HomePage() {
             alt="Homosassa Tarpon Charter"
             fill
             priority
+            fetchPriority="high"
             quality={80}
             className="block md:hidden object-cover object-center"
             sizes="100vw"
