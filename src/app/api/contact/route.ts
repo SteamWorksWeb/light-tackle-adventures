@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: "Light Tackle Adventures <noreply@lighttackleadventures.com>",
-      to: [process.env.CONTACT_EMAIL ?? "jlemke2@tampabay.rr.com"],
+      to: [process.env.CONTACT_EMAIL ?? "info@lighttackleadventures.com"],
       replyTo: email,
       subject: `New Charter Inquiry from ${name}`,
       html: `

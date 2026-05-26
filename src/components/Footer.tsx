@@ -97,11 +97,11 @@ export default function Footer() {
               813-917-4989
             </a>
             <a
-              href="mailto:jlemke2@tampabay.rr.com"
+              href="mailto:info@lighttackleadventures.com"
               className="flex items-center gap-3 text-slate-400 hover:text-[#0ea5e9] transition-colors duration-200 text-sm"
             >
               <Mail size={16} className="shrink-0 text-[#0ea5e9]" />
-              jlemke2@tampabay.rr.com
+              info@lighttackleadventures.com
             </a>
             <a
               href="https://www.facebook.com/lighttackleadventurestampafishingcharters/"
