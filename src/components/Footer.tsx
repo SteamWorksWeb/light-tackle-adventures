@@ -104,13 +104,22 @@ export default function Footer() {
               captjimlemke@gmail.com
             </a>
             <a
-              href="https://www.facebook.com/lighttackleadventurestampafishingcharters/"
+              href="https://www.facebook.com/jim.lemke.37"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-slate-400 hover:text-[#0ea5e9] transition-colors duration-200 text-sm"
             >
               <ExternalLink size={16} className="shrink-0 text-[#0ea5e9]" />
               Follow on Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/captjimlemke"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-slate-400 hover:text-[#0ea5e9] transition-colors duration-200 text-sm"
+            >
+              <ExternalLink size={16} className="shrink-0 text-[#0ea5e9]" />
+              Follow on Instagram
             </a>
           </div>
         </div>
