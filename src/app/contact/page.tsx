@@ -66,11 +66,13 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Load reCAPTCHA V3 SDK — deferred, no badge unless triggered */}
-      <Script
-        src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
-        strategy="lazyOnload"
-      />
+      {/* Load reCAPTCHA V3 SDK only when the site key is configured */}
+      {SITE_KEY && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
+          strategy="lazyOnload"
+        />
+      )}
 
       {/* ── HERO ── */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">
