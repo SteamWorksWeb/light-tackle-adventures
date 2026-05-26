@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
-import { Phone, Mail, CheckCircle2, Clock, CalendarCheck, MessageCircle } from "lucide-react";
+import { Phone, Mail, CheckCircle2, Clock, CalendarCheck, MessageCircle, Hourglass } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Book a Homosassa Charter | Light Tackle Adventures",
+  title: "Reservations | Light Tackle Adventures",
   description:
-    "Reserve your Nature Coast fishing charter instantly online. Prime dates for Homosassa Tarpon and Scallop seasons book months in advance.",
+    "Online booking is coming soon. In the meantime, call or email Capt. Jim directly to reserve your Nature Coast fishing charter.",
 };
 
 const steps = [
@@ -47,11 +46,11 @@ export default function ReservationsPage() {
             Homosassa · Crystal River · The Nature Coast
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-            Secure Your Date on the Nature Coast
+            Book Your Nature Coast Charter
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Prime dates for Homosassa Tarpon and Scallop seasons book months in
-            advance. Select your date below and lock it in before it&apos;s gone.
+            Our online booking system is almost ready. In the meantime, reach
+            out to Capt. Jim directly — he&apos;ll get you set up fast.
           </p>
         </div>
       </section>
@@ -141,55 +140,57 @@ export default function ReservationsPage() {
 
           </aside>
 
-          {/* ── RIGHT: Booking Engine (7 cols) ── */}
+          {/* ── RIGHT: Coming Soon Panel (7 cols) ── */}
           <div className="lg:col-span-7 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="bg-white p-2 md:p-6 rounded-[7px] shadow-lg border border-slate-200 min-h-[600px]">
+            <div className="bg-white rounded-[7px] shadow-lg border border-slate-200 min-h-[500px] flex flex-col items-center justify-center text-center p-10 gap-8">
 
-              {/* Widget mount point */}
-              <div
-                id="unfair-booking-widget"
-                data-captain="730f99f1-8d0a-4589-acc2-3ac6f3fd167d"
-              />
+              {/* Icon */}
+              <div className="w-20 h-20 rounded-full bg-[#FA4616]/10 border-2 border-[#FA4616]/20 flex items-center justify-center">
+                <Hourglass size={36} className="text-[#FA4616]" />
+              </div>
 
-              {/* Fallback while widget loads */}
-              <noscript>
-                <div className="flex flex-col items-center justify-center h-64 gap-4 text-center px-6">
-                  <p className="text-slate-600 text-sm">
-                    JavaScript is required to load the booking calendar.
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 bg-[#FA4616] text-white font-bold px-6 py-3 rounded-[7px] text-sm"
-                  >
-                    Contact Us Instead
-                  </Link>
-                </div>
-              </noscript>
+              {/* Heading */}
+              <div>
+                <p className="text-[#FA4616] text-xs uppercase tracking-[0.25em] font-bold mb-3">
+                  Online Booking
+                </p>
+                <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                  Coming Soon!
+                </h2>
+                <p className="text-slate-500 text-base md:text-lg max-w-sm mx-auto leading-relaxed">
+                  Our online booking system is being set up. For now, please
+                  call or email Capt. Jim — he&apos;ll get you on the water.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
+                <a
+                  href="tel:813-917-4989"
+                  className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#FA4616] hover:bg-[#e03a0e] text-white font-bold px-6 py-4 rounded-[7px] text-sm transition-colors duration-200 shadow-md shadow-[#FA4616]/25"
+                >
+                  <Phone size={16} />
+                  Call 813-917-4989
+                </a>
+                <a
+                  href="mailto:jlemke2@tampabay.rr.com"
+                  className="flex-1 inline-flex items-center justify-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-4 rounded-[7px] text-sm transition-colors duration-200"
+                >
+                  <Mail size={16} />
+                  Send an Email
+                </a>
+              </div>
+
+              {/* Sub-note */}
+              <p className="text-slate-400 text-xs">
+                Capt. Jim typically responds within a few hours.
+              </p>
 
             </div>
-
-            <p className="text-slate-400 text-xs text-center mt-4">
-              Powered by{" "}
-              <a
-                href="https://unfairsoftware.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-slate-600 underline underline-offset-2 transition-colors"
-              >
-                Unfair Software
-              </a>{" "}
-              · Secure booking · No payment until confirmed
-            </p>
           </div>
 
         </div>
       </section>
-
-      {/* Widget script — lazyOnload keeps it off the critical path */}
-      <Script
-        src="https://booking.unfairsoftware.com/embed.js"
-        strategy="lazyOnload"
-      />
     </>
   );
 }
