@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -71,6 +72,14 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* TryTN booking widget — loaded once for the whole site */}
+        <Script
+          src="https://trytn.com/scripts/embedding/main.js"
+          id="trytn-embed"
+          strategy="lazyOnload"
+          data-defaultculture="en"
+          data-business-id="c9fb2858-4935-4497-9ea8-dba060b956eb"
+        />
       </body>
     </html>
   );

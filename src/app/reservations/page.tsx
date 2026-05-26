@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, CheckCircle2, Clock, CalendarCheck, MessageCircle, Hourglass } from "lucide-react";
+import { Phone, Mail, CheckCircle2, Clock, CalendarCheck, MessageCircle, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Reservations | Light Tackle Adventures",
+  title: "Book a Charter | Light Tackle Adventures",
   description:
-    "Online booking is coming soon. In the meantime, call or email Capt. Jim directly to reserve your Nature Coast fishing charter.",
+    "Reserve your Nature Coast fishing charter online with Capt. Jim Lemke. Tarpon, Inshore, Fly Fishing, and Scalloping trips departing from Homosassa and Crystal River.",
 };
 
 const steps = [
@@ -49,18 +49,18 @@ export default function ReservationsPage() {
             Book Your Nature Coast Charter
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Our online booking system is almost ready. In the meantime, reach
-            out to Capt. Jim directly — he&apos;ll get you set up fast.
+            Select your dates, pick your adventure, and lock in your spot with
+            Capt. Jim — all online in minutes.
           </p>
         </div>
       </section>
 
-      {/* ── CONVERSION GRID ── */}
+      {/* ── MAIN GRID ── */}
       <section className="bg-slate-50 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 md:py-24 px-4">
 
-          {/* ── LEFT: Trust Signals (5 cols) ── */}
-          <aside className="lg:col-span-5 flex flex-col gap-10 order-2 lg:order-1">
+          {/* ── LEFT: Trust Signals (4 cols) ── */}
+          <aside className="lg:col-span-4 flex flex-col gap-10 order-2 lg:order-1">
 
             {/* What Happens Next */}
             <div>
@@ -140,53 +140,66 @@ export default function ReservationsPage() {
 
           </aside>
 
-          {/* ── RIGHT: Coming Soon Panel (7 cols) ── */}
-          <div className="lg:col-span-7 order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="bg-white rounded-[7px] shadow-lg border border-slate-200 min-h-[500px] flex flex-col items-center justify-center text-center p-10 gap-8">
+          {/* ── RIGHT: Booking Widget (8 cols) ── */}
+          <div className="lg:col-span-8 order-1 lg:order-2">
+            <div className="bg-white rounded-[7px] shadow-lg border border-slate-200 overflow-hidden">
 
-              {/* Icon */}
-              <div className="w-20 h-20 rounded-full bg-[#FA4616]/10 border-2 border-[#FA4616]/20 flex items-center justify-center">
-                <Hourglass size={36} className="text-[#FA4616]" />
+              {/* Widget header */}
+              <div className="bg-[#0a1520] px-8 py-5 flex items-center justify-between">
+                <div>
+                  <p className="text-[#FA4616] text-xs uppercase tracking-widest font-bold mb-1">
+                    Live Availability
+                  </p>
+                  <h2 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+                    Reserve Your Trip
+                  </h2>
+                </div>
+                <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+                  <ShieldCheck size={13} className="text-[#FA4616]" />
+                  <span className="text-slate-300 text-xs font-medium">Secure Booking</span>
+                </div>
               </div>
 
-              {/* Heading */}
-              <div>
-                <p className="text-[#FA4616] text-xs uppercase tracking-[0.25em] font-bold mb-3">
-                  Online Booking
+              {/* TryTN embed button */}
+              <div className="p-8 flex flex-col items-center justify-center min-h-[420px] gap-6">
+                <p className="text-slate-500 text-sm text-center max-w-sm">
+                  Click below to view available dates and complete your booking
+                  through our secure reservation system.
                 </p>
-                <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                  Coming Soon!
-                </h2>
-                <p className="text-slate-500 text-base md:text-lg max-w-sm mx-auto leading-relaxed">
-                  Our online booking system is being set up. For now, please
-                  call or email Capt. Jim — he&apos;ll get you on the water.
-                </p>
-              </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
+                {/* TryTN booking button — the class "trytn-button" is required by the widget */}
                 <a
-                  href="tel:813-917-4989"
-                  className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#FA4616] hover:bg-[#e03a0e] text-white font-bold px-6 py-4 rounded-[7px] text-sm transition-colors duration-200 shadow-md shadow-[#FA4616]/25"
+                  href="https://trytn.com/en/lighttackleadventures"
+                  className="trytn-button inline-flex items-center justify-center gap-3 bg-[#FA4616] hover:bg-[#e03a0e] text-white font-bold px-10 py-5 rounded-[7px] text-base shadow-lg shadow-[#FA4616]/25 transition-all duration-300 hover:shadow-[#FA4616]/40 hover:-translate-y-0.5"
                 >
-                  <Phone size={16} />
-                  Call 813-917-4989
+                  <CalendarCheck size={20} />
+                  Check Available Dates &amp; Book Now
                 </a>
-                <a
-                  href="mailto:info@lighttackleadventures.com"
-                  className="flex-1 inline-flex items-center justify-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-4 rounded-[7px] text-sm transition-colors duration-200"
-                >
-                  <Mail size={16} />
-                  Send an Email
-                </a>
-              </div>
 
-              {/* Sub-note */}
-              <p className="text-slate-400 text-xs">
-                Capt. Jim typically responds within a few hours.
-              </p>
+                <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
+                  {trustBadges.map((badge) => (
+                    <span key={badge} className="flex items-center gap-1.5 text-slate-400 text-xs">
+                      <CheckCircle2 size={12} className="text-[#FA4616]" />
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
             </div>
+
+            {/* Sub-note */}
+            <p className="text-slate-400 text-xs text-center mt-4">
+              Prefer not to book online?{" "}
+              <Link href="/contact" className="text-[#FA4616] hover:underline font-medium">
+                Send a message
+              </Link>{" "}
+              or call{" "}
+              <a href="tel:813-917-4989" className="text-[#FA4616] hover:underline font-medium">
+                813-917-4989
+              </a>{" "}
+              and Capt. Jim will take care of you.
+            </p>
           </div>
 
         </div>
