@@ -114,7 +114,7 @@ export default function ReservationsPage() {
               </div>
               <p className="text-slate-700 text-sm leading-relaxed mb-5">
                 Capt. Jim is happy to discuss your trip, answer questions about
-                the bite, or help you pick the best window for Tarpon season.
+                the bite, or help you pick the best window for your upcoming adventure.
               </p>
               <div className="space-y-3">
                 <a
