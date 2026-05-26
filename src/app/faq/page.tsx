@@ -139,7 +139,7 @@ export default function FaqPage() {
                 </a>
 
                 <a
-                  href="mailto:info@lighttackleadventures.com"
+                  href="mailto:captjimlemke@gmail.com"
                   className="flex items-center justify-center gap-2 w-full border border-slate-200 hover:border-[#FA4616]/40 text-slate-600 hover:text-[#FA4616] py-3.5 rounded-[7px] font-semibold text-sm transition-all duration-300"
                 >
                   Send an Email

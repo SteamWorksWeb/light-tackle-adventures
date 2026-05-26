@@ -65,12 +65,12 @@ export default function Header() {
               (813) 917-4989
             </a>
             <a
-              href="mailto:info@lighttackleadventures.com"
+              href="mailto:captjimlemke@gmail.com"
               id="utility-bar-email"
               className="text-xs font-medium text-slate-400 hover:text-[#FA4616] flex items-center gap-1.5 transition-colors"
             >
               <Mail className="w-3.5 h-3.5" />
-              info@lighttackleadventures.com
+              captjimlemke@gmail.com
             </a>
           </div>
 
@@ -207,10 +207,10 @@ export default function Header() {
                     <Phone size={14} /> 813-917-4989
                   </a>
                   <a
-                    href="mailto:info@lighttackleadventures.com"
+                    href="mailto:captjimlemke@gmail.com"
                     className="flex items-center gap-2 text-sm text-slate-400"
                   >
-                    <Mail size={14} /> info@lighttackleadventures.com
+                    <Mail size={14} /> captjimlemke@gmail.com
                   </a>
                 </div>
 

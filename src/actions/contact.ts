@@ -59,7 +59,7 @@ export async function submitContactForm(
   // ── 3. Send email via Resend ─────────────────────────────────────────────
   const { error } = await resend.emails.send({
     from: "Light Tackle Adventures <noreply@lighttackleadventures.com>",
-    to:   [process.env.CONTACT_EMAIL ?? "info@lighttackleadventures.com"],
+    to:   [process.env.CONTACT_EMAIL ?? "captjimlemke@gmail.com"],
     replyTo: data.email,
     subject: `New Charter Inquiry from ${data.firstName} ${data.lastName}`,
     html: `

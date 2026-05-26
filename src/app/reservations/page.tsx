@@ -127,13 +127,13 @@ export default function ReservationsPage() {
                   813-917-4989
                 </a>
                 <a
-                  href="mailto:info@lighttackleadventures.com"
+                  href="mailto:captjimlemke@gmail.com"
                   className="flex items-center gap-3 text-slate-700 hover:text-[#FA4616] transition-colors duration-200 text-sm group"
                 >
                   <span className="w-8 h-8 rounded-full bg-[#FA4616]/10 flex items-center justify-center group-hover:bg-[#FA4616]/20 transition-colors">
                     <Mail size={14} className="text-[#FA4616]" />
                   </span>
-                  info@lighttackleadventures.com
+                  captjimlemke@gmail.com
                 </a>
               </div>
             </div>

@@ -296,14 +296,14 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  <a href="mailto:info@lighttackleadventures.com" className="flex items-center gap-3 group">
+                  <a href="mailto:captjimlemke@gmail.com" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-full bg-[#FA4616]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FA4616]/20 transition-colors">
                       <Mail size={16} className="text-[#FA4616]" />
                     </div>
                     <div>
                       <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Email</p>
                       <p className="text-slate-900 font-semibold text-sm group-hover:text-[#FA4616] transition-colors break-all">
-                        info@lighttackleadventures.com
+                        captjimlemke@gmail.com
                       </p>
                     </div>
                   </a>
