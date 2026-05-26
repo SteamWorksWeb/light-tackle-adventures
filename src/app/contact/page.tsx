@@ -34,17 +34,20 @@ export default function ContactPage() {
     setLoading(true);
 
     try {
-      // 1. Get reCAPTCHA V3 token
-      const token = await new Promise<string>((resolve, reject) => {
-        window.grecaptcha.ready(async () => {
-          try {
-            const t = await window.grecaptcha.execute(SITE_KEY, { action: "submit" });
-            resolve(t);
-          } catch (err) {
-            reject(err);
-          }
+      // 1. Get reCAPTCHA V3 token (skipped if site key not yet configured)
+      let token = "";
+      if (SITE_KEY) {
+        token = await new Promise<string>((resolve, reject) => {
+          window.grecaptcha.ready(async () => {
+            try {
+              const t = await window.grecaptcha.execute(SITE_KEY, { action: "submit" });
+              resolve(t);
+            } catch (err) {
+              reject(err);
+            }
+          });
         });
-      });
+      }
 
       // 2. Pass FormData + token to the server action
       const formData = new FormData(formRef.current!);
