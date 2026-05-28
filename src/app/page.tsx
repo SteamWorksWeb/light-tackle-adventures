@@ -248,8 +248,8 @@ export default function HomePage() {
           {/* Left — Image */}
           <div className="relative h-56 md:h-auto min-h-[280px]">
             <Image
-              src="/images/tarpon-cta.jpeg"
-              alt="Angler with a large Tarpon"
+              src="/images/scallop2.jpg"
+              alt="Scalloping in the crystal-clear waters of Homosassa"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -262,11 +262,10 @@ export default function HomePage() {
               Homosassa · The Nature Coast · 2026 Season
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              Now Booking World-Class Homosassa Tarpon Charters for 2026
+              Now Booking World-Class Homosassa Scalloping Charters for 2026
             </h2>
             <p className="text-white/90 text-base md:text-lg mb-8 leading-relaxed">
-              Homosassa is the Tarpon capital of the world — and the calendar
-              fills up fast. Secure your prime migration dates before they&apos;re gone.
+              Secure your dates online today so you don&apos;t miss out on the 2026 season!
             </p>
             <div>
               <Link
