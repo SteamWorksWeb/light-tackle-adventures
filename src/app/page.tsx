@@ -248,7 +248,7 @@ export default function HomePage() {
           {/* Left — Image */}
           <div className="relative h-56 md:h-auto min-h-[280px]">
             <Image
-              src="/images/scallop2.jpg"
+              src="/images/scallop2.jpeg"
               alt="Scalloping in the crystal-clear waters of Homosassa"
               fill
               className="object-cover"
