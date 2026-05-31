@@ -588,13 +588,6 @@ export default function HomePage() {
             <YouTubeFacade videoId="tQfGUuKWfFk" startAt={19} />
           </div>
 
-          <Link
-            href="/videos"
-            className="inline-flex items-center gap-2 border border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white font-semibold px-6 py-3 rounded-[7px] text-sm transition-all duration-300"
-          >
-            See More Videos
-            <ArrowRight size={14} />
-          </Link>
         </div>
       </motion.section>
     </>
