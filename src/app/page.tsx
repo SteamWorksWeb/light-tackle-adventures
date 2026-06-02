@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
-import LineDivider from "@/components/LineDivider";
 
 /* ─────────────── Below-the-fold lazy components ─────────────── */
 const YouTubeFacade = dynamic(() => import("@/components/YouTubeFacade"), {
@@ -338,7 +337,16 @@ export default function HomePage() {
       </section>
 
       {/* ── LINE BREAK DIVIDER ── */}
-      <LineDivider className="py-6 md:py-10 px-4 bg-white" />
+      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-white">
+        <Image
+          src="/images/line-break.webp"
+          alt="Decorative fly line divider"
+          width={800}
+          height={80}
+          loading="lazy"
+          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
+        />
+      </div>
       {/* ── /LINE BREAK DIVIDER ── */}
 
       {/* ── ABOUT CAPT. JIM ── */}
@@ -412,7 +420,16 @@ export default function HomePage() {
 
       {/* ── SPECIES SPOTLIGHT ── */}
       {/* ── LINE BREAK DIVIDER ── */}
-      <LineDivider className="py-6 md:py-10 px-4 bg-slate-50" />
+      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-slate-50">
+        <Image
+          src="/images/line-break.webp"
+          alt="Decorative fly line divider"
+          width={800}
+          height={80}
+          loading="lazy"
+          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
+        />
+      </div>
       {/* ── /LINE BREAK DIVIDER ── */}
       <motion.section {...fadeUp} className="py-10 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
@@ -498,7 +515,16 @@ export default function HomePage() {
 
       {/* ── FISHING REPORTS BLOG ── */}
       {/* ── LINE BREAK DIVIDER ── */}
-      <LineDivider className="py-6 md:py-10 px-4 bg-white" />
+      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-white">
+        <Image
+          src="/images/line-break.webp"
+          alt="Decorative fly line divider"
+          width={800}
+          height={80}
+          loading="lazy"
+          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
+        />
+      </div>
       {/* ── /LINE BREAK DIVIDER ── */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
