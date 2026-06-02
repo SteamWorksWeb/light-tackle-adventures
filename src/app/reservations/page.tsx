@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { Phone, Mail, CheckCircle2, Clock, CalendarCheck, MessageCircle, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -204,6 +205,14 @@ export default function ReservationsPage() {
 
         </div>
       </section>
+      {/* TryTN booking widget — scoped to /reservations only, zero impact on other pages */}
+      <Script
+        src="https://trytn.com/scripts/embedding/main.js"
+        id="trytn-embed"
+        strategy="lazyOnload"
+        data-defaultculture="en"
+        data-business-id="c9fb2858-4935-4497-9ea8-dba060b956eb"
+      />
     </>
   );
 }
