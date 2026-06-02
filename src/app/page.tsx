@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import BlogCard from "@/components/BlogCard";
+import LineDivider from "@/components/LineDivider";
 
 /* ─────────────── Below-the-fold lazy components ─────────────── */
 const YouTubeFacade = dynamic(() => import("@/components/YouTubeFacade"), {
@@ -336,16 +337,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── LINE BREAK DIVIDER [EXPERIMENT] — delete this block to revert ── */}
-      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-white">
-        <Image
-          src="/images/line-break.png"
-          alt="Decorative fly line divider"
-          width={800}
-          height={80}
-          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
-        />
-      </div>
+      {/* ── LINE BREAK DIVIDER ── */}
+      <LineDivider className="py-6 md:py-10 px-4 bg-white" />
       {/* ── /LINE BREAK DIVIDER ── */}
 
       {/* ── ABOUT CAPT. JIM ── */}
@@ -358,6 +351,7 @@ export default function HomePage() {
               alt="Capt. Jim Lemke holding a trophy redfish"
               width={600}
               height={750}
+              loading="lazy"
               className="w-full h-auto object-cover rounded-[7px] shadow-lg"
             />
           </motion.div>
@@ -417,16 +411,8 @@ export default function HomePage() {
       </section>
 
       {/* ── SPECIES SPOTLIGHT ── */}
-      {/* ── LINE BREAK DIVIDER [EXPERIMENT] — delete this block to revert ── */}
-      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-slate-50">
-        <Image
-          src="/images/line-break.png"
-          alt="Decorative fly line divider"
-          width={800}
-          height={80}
-          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
-        />
-      </div>
+      {/* ── LINE BREAK DIVIDER ── */}
+      <LineDivider className="py-6 md:py-10 px-4 bg-slate-50" />
       {/* ── /LINE BREAK DIVIDER ── */}
       <motion.section {...fadeUp} className="py-10 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
@@ -511,16 +497,8 @@ export default function HomePage() {
       </section>
 
       {/* ── FISHING REPORTS BLOG ── */}
-      {/* ── LINE BREAK DIVIDER [EXPERIMENT] — delete this block to revert ── */}
-      <div className="w-full flex justify-center py-6 md:py-10 px-4 bg-white">
-        <Image
-          src="/images/line-break.png"
-          alt="Decorative fly line divider"
-          width={800}
-          height={80}
-          className="w-full max-w-3xl h-auto opacity-70 mix-blend-multiply"
-        />
-      </div>
+      {/* ── LINE BREAK DIVIDER ── */}
+      <LineDivider className="py-6 md:py-10 px-4 bg-white" />
       {/* ── /LINE BREAK DIVIDER ── */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
