@@ -196,7 +196,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-[family-name:var(--font-playfair)] text-4xl md:text-6xl font-bold text-white leading-tight mb-6"
           >
-            Charters for Redfish, Trout, Scalloping, &amp; more!
+            Charters for Redfish, Trout, Tarpon, Scalloping, &amp; More!
           </motion.h1>
 
 
