@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fly Fishing Charters | Light Tackle Adventures",
+  title: "Homosassa Fly Fishing Charters | Light Tackle Adventures",
   description:
-    "Technical sight fishing for Tarpon, Redfish, and Snook on the Nature Coast with Capt. Jim Lemke.",
+    "Technical saltwater fly fishing on the Nature Coast — sight-cast to Tarpon, Redfish, and Snook on the Homosassa and Crystal River flats with Capt. Jim Lemke.",
 };
 
 const tripDetails = [
@@ -83,7 +83,7 @@ export default function FlyFishingChartersPage() {
             The Ultimate Test
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Fly Fishing Charters
+            Homosassa Fly Fishing Charters
           </h1>
           <p className="text-xl text-slate-300 mt-4 max-w-2xl leading-relaxed">
             Sight-cast to giant Tarpon, tailing Redfish, and aggressive Snook

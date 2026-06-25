@@ -4,9 +4,9 @@ import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Light Tackle Adventures",
+  title: "Fishing Charter FAQs | Homosassa & Crystal River | Light Tackle Adventures",
   description:
-    "Everything you need to know before your Homosassa fishing or scalloping charter with Capt. Jim Lemke.",
+    "Everything you need to know before your Homosassa or Crystal River fishing or scalloping charter with Capt. Jim Lemke — licenses, gear, cancellations, and more.",
 };
 
 const faqs = [
@@ -75,10 +75,10 @@ export default function FaqPage() {
             Trip Details
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Frequently Asked Questions
+            Charter FAQs
           </h1>
           <p className="text-xl text-slate-300 mt-4 max-w-2xl leading-relaxed">
-            Everything you need to know before you step on the bay boat.
+            Everything you need to know before your Homosassa or Crystal River charter.
           </p>
         </div>
       </section>

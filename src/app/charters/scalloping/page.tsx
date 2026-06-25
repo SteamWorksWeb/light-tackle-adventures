@@ -76,7 +76,7 @@ export default function ScallopingChartersPage() {
             The Ultimate Family Adventure
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Nature Coast Scalloping
+            Homosassa Scalloping Charters
           </h1>
           <p className="text-xl text-slate-300 mt-4 max-w-2xl leading-relaxed">
             Dive into the warm, clear waters of the Gulf for a fun-filled

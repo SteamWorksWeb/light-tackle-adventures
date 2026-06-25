@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 import { reports } from "@/data/reports";
 
 export const metadata: Metadata = {
-  title: "Fishing Reports | Light Tackle Adventures",
+  title: "Homosassa Fishing Reports | Nature Coast | Light Tackle Adventures",
   description:
-    "Dispatches from the Homosassa and Crystal River flats with Capt. Jim Lemke. Read the latest fishing reports from the Nature Coast.",
+    "On-the-water dispatches from the Homosassa and Crystal River flats with Capt. Jim Lemke. Read the latest Tarpon, Redfish, and Inshore fishing reports.",
 };
 
 export default function ReportsPage() {
@@ -31,7 +31,7 @@ export default function ReportsPage() {
             From the Water
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Fishing Reports
+            Homosassa Fishing Reports
           </h1>
           <p className="text-xl text-slate-300 mt-4 max-w-2xl leading-relaxed">
             Dispatches from the Homosassa and Crystal River flats.

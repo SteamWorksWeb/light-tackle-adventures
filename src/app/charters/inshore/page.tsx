@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Inshore Fishing Charters | Light Tackle Adventures",
+  title: "Homosassa Inshore Fishing Charters | Light Tackle Adventures",
   description:
-    "Fish the pristine flats and backcountry of Homosassa and Crystal River for Redfish, Trout, and Snook with Capt. Jim Lemke.",
+    "Fish the pristine grass flats and backcountry of Homosassa and Crystal River for Redfish, Speckled Trout, and Snook with Capt. Jim Lemke.",
 };
 
 const tripDetails = [
@@ -92,7 +92,7 @@ export default function InshoreChartersPage() {
             Year-Round Action
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Inshore &amp; Backcountry Charters
+            Homosassa Inshore &amp; Backcountry Fishing Charters
           </h1>
           <p className="text-xl text-slate-300 mt-4 max-w-2xl leading-relaxed">
             Stalk Redfish, Trout, and Snook in the pristine shallow waters of
