@@ -606,6 +606,31 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+
+      // ── Additional URLs found live in Google's index ────────────────────────
+      // "tampa-winter-fishing-heating" — old WordPress slug with typo in title
+      {
+        source: "/tampa-winter-fishing-heating",
+        destination: "/reports",
+        permanent: true,
+      },
+      {
+        source: "/tampa-winter-fishing-heating/",
+        destination: "/reports",
+        permanent: true,
+      },
+      // Old WordPress portfolio custom post type
+      {
+        source: "/portfolio/:path*",
+        destination: "/photos",
+        permanent: true,
+      },
+      // Catch-all for any remaining /home/* WordPress sub-pages
+      {
+        source: "/home/:path*",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 
