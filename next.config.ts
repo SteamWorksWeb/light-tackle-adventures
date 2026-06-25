@@ -269,23 +269,15 @@ const nextConfig: NextConfig = {
       },
 
       // ── About / Guide pages ────────────────────────────────────────────────
+      // Wildcard catches /capt-jim, /capt-jim/tampa-fishing-guide,
+      // /capt-jim/homosassa-fishing-guide, and any other sub-paths
+      {
+        source: "/capt-jim/:path*",
+        destination: "/about",
+        permanent: true,
+      },
       {
         source: "/capt-jim",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/capt-jim/",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/capt-jim/tampa-fishing-guide",
-        destination: "/about",
-        permanent: true,
-      },
-      {
-        source: "/capt-jim/tampa-fishing-guide/",
         destination: "/about",
         permanent: true,
       },
